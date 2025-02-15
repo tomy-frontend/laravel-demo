@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\RequestSampleController;
 use App\Http\Controllers\UtilityController;
@@ -49,3 +50,5 @@ Route::get('/login', [RequestSampleController::class, 'loginForm']);
 
 // ログイン 名前付きルート"login"
 Route::post('/login', [RequestSampleController::class, 'login'])->name(name: 'login');
+
+Route::resource('/events', controller: EventController::class)->only(['create', 'store']);
