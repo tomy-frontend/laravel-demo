@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 // 基本的にpathと表示するファイルだけを記述する
 
-// アロー関数でルートを記述する場合
+// アロー関数でルートを記述する場合の書き方
 Route::get('/hello-world', fn() => "hello!world!!");
 
 // 連想配列を第二引数を渡すことも可能
